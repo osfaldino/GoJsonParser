@@ -6,7 +6,7 @@
 ```go
 var cfg Config
 ```
-Вызываем функцию и проверяем ее на наличие ошибок:
+### Вызываем функцию и проверяем ее на наличие ошибок:
 
 ```go
 err := cfg.ParseConfig("cfg.json")
@@ -15,12 +15,21 @@ if err != nil {
   os.Exit(1)
 }
 ```
-Выводим значения:
+### Выводим значения:
 
 ```go
 fmt.Printf("AppName: %s\nVersion: %s\n", cfg.AppName, cfg.Version)
 
 for _, user := range cfg.Users {
   fmt.Println(user)
+}
+```
+### Пример json:
+```json
+{
+    "appName": "JsonLearn",
+    "version": "1.0.0",
+    "debug": true,
+    "users": ["Alice", "Bob", "Charlie"]
 }
 ```
