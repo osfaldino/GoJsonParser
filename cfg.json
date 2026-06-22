@@ -1,0 +1,6 @@
+{
+    "appName": "JsonLearn",
+    "version": "1.0.0",
+    "debug": true,
+    "users": ["Alice", "Bob", "Charlie"]
+}
